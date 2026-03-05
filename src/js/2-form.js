@@ -15,7 +15,12 @@ function handleInput(e) {
 }
 document.addEventListener('DOMContentLoaded', handleDOMContentLoaded);
 function handleDOMContentLoaded() {
-  const userData = JSON.parse(localStorage.getItem(formKey)) || {};
+  const savedData = localStorage.getItem(formKey);
+
+  if (!savedData) {
+    return;
+  }
+  const userData = JSON.parse(savedData);
   form.elements.email.value = userData.email || '';
   form.elements.message.value = userData.message || '';
 
@@ -33,6 +38,6 @@ function handleSubmit(e) {
   console.log(formData);
   localStorage.removeItem(formKey);
   formData.email = '';
-  form.message = '';
+  formData.message = '';
   form.reset();
 }
