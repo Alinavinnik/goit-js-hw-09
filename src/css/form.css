@@ -1,3 +1,10 @@
+.form {
+  margin: 0 auto;
+  max-width: 400px;
+  border: 1px solid hsl(0, 3%, 18%);
+  border-radius: 15px;
+  padding: 30px 20px;
+}
 .feedback-form {
   display: flex;
   flex-direction: column;
@@ -25,7 +32,7 @@
 .email-input:active,
 .textarea-input:hover,
 .textarea-input:active {
-  border: 1px solid #808080;
+  border: 1px solid #000000;
 }
 .textarea-input {
   max-width: 360px;
