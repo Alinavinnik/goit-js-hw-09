@@ -89,5 +89,5 @@ elemGallery.innerHTML = itemsTemplate(images);
 
 let gallery = new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
-  fadeSpeed: 250,
+  captionDelay: 250,
 });
